@@ -38,3 +38,10 @@ class Solution:
 solution = Solution()
 print(solution.containsDuplicate([1, 2, 3, 4, 5]))
 print(solution.containsDuplicate([1, 2, 3, 4, 3, 1]))
+#Element-wise addition of two lists
+def add_lists(list1, list2):
+    return [a + b for a, b in zip(list1, list2)]
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+result = add_lists(list1, list2)
+print(result)  #[5, 7, 9]
