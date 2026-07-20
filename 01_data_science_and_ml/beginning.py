@@ -45,3 +45,15 @@ list1 = [1, 2, 3]
 list2 = [4, 5, 6]
 result = add_lists(list1, list2)
 print(result)  #[5, 7, 9]
+#Leet code question 1502 Can Make Arithmetic Progression From Sequence
+class Solution:
+    def canMakeArithmeticProgression(self, arr: list[int]) -> bool:
+        arr.sort()
+        common_diff = arr[1] - arr[0]
+        for i in range(1, len(arr)):
+            if arr[i] - arr[i - 1] != common_diff:
+                return False
+        return True
+solution = Solution()
+print(solution.canMakeArithmeticProgression([3, 5, 7]))
+print(solution.canMakeArithmeticProgression([1, 2, 4]))
