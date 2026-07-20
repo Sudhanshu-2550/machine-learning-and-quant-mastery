@@ -25,4 +25,16 @@ class Solution:
             seen[num] = i
         return []
 solution = Solution()
-print(solution.twoSum([2, 7, 11, 15], 9))  
+print(solution.twoSum([2, 7, 11, 15], 9))
+#Leet code question 217 Contains duplicate
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        seen = set()
+        for num in nums:
+            if num in seen:
+                return True
+            seen.add(num)
+        return False
+solution = Solution()
+print(solution.containsDuplicate([1, 2, 3, 4, 5]))
+print(solution.containsDuplicate([1, 2, 3, 4, 3, 1]))
